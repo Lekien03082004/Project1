@@ -1,0 +1,11 @@
+.container_blogCard{
+    width: 30%;
+    float: left;
+    
+}
+.container_imgBlogCard{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
