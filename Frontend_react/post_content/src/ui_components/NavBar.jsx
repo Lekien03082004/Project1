@@ -14,7 +14,6 @@ import Switch from './Switch';
 
 function NavBar( ) {
   const {isDarkMode} = useContext(ThemeContext)
-  console.log(isDarkMode);
   return (
     <div className={clsx(isDarkMode ? 'bg-dark' : 'bg-body-secondary')}>
       <Navbar expand="lg" className="container">

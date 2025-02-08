@@ -11,7 +11,7 @@ from rest_framework.pagination import PageNumberPagination
 
 # Create your views here.
 class BlogListPagination(PageNumberPagination):
-    page_size=3
+    page_size=6
 
 @api_view(["GET"])
 def blog_list(request):
@@ -55,10 +55,10 @@ def create_blog(request):
 @permission_classes([IsAuthenticated])
 def update_blog(request, pk):
     user = request.user
-    blog = Blog.objects.get(id= pk)
+    blog = Blog.objects.get(id = pk)
     if blog.author != user:
         return Response({"error": "You are you not the author of this blog"}, status=status.HTTP_403_FORBIDDEN)
-    serializers = BlogSerializer(blog, data= request.data)
+    serializers = BlogSerializer(blog, data=request.data)
     if serializers.is_valid():
         serializers.save()
         return Response(serializers.data)

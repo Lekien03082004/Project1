@@ -5,16 +5,17 @@ import { useQuery } from "@tanstack/react-query";
 import { getBlogs } from "../services/apiBlog";
 
 function HomePage() {
-  const data = useQuery({
+  const {isLoading , isError, data:blogs} = useQuery({
     queryKey : ['blogs'],
     queryFn: getBlogs
   })
-  console.log(data)
+  console.log(blogs)
   return (
     <React.Fragment>
       <Header/>
-      <BlogContainer/>
+      <BlogContainer isLoading = {isLoading} blogs= {blogs?.results||[]}/>
     </React.Fragment>
   );
 }
 export default HomePage;
+

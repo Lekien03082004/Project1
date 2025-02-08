@@ -31,7 +31,7 @@ class Blog(models.Model):
         ("Lifestyle", "Lifestyle")
     )
     title = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(max_length=255, unique=True, blank=True)
     content = models.TextField()
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, related_name='blogs', null=True)
     created_at = models.DateTimeField(auto_now_add=True)

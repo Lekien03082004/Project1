@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Badge = () => {
+const Badge = ({blog}) => {
   return (
     <StyledWrapper>
       <button type="button" className="btn m-2">
-        <strong>Frontend</strong>
+        <strong>{blog?.category}</strong>
         <div id="container-stars">
           <div id="stars" />
         </div>
