@@ -7,7 +7,6 @@ const DetailPage = () =>{
     return (
         <div className="container mt-5">
             <Badge/>
-
             <div className={clsx()}>
                 <h2 className={clsx()}>
                     Buil and Ecommer Web App with Django and React.

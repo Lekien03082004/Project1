@@ -11,7 +11,7 @@ from rest_framework.pagination import PageNumberPagination
 
 # Create your views here.
 class BlogListPagination(PageNumberPagination):
-    page_size=6
+    page_size=3
 
 @api_view(["GET"])
 def blog_list(request):

@@ -31,7 +31,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             email=email, 
             username=username, 
             first_name=first_name, 
-            last_name=last_name
+            last_name=last_name,
+            password=password
             )
         new_user.set_password(password)
         new_user.save()
@@ -40,7 +41,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 class SimpleAuthorSerializer(serializers.ModelSerializer):
     class Meta: 
         model = get_user_model()
-        fields = ['id', 'username', 'first_name', 'last_name']
+        fields = ['id', 'username', 'first_name', 'last_name','profile_picture']
         
 
 class BlogSerializer(serializers.ModelSerializer):

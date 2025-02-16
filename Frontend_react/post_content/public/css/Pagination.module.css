@@ -1,0 +1,45 @@
+.container_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_list{
+    display: block;
+}
+.list_link{
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+.list_item{
+    background-color: pink;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Thêm lớp active */
+.list_link.active {
+    background-color: #f700ff; /* Màu nền khi item được chọn */
+    color: white; /* Màu chữ khi item được chọn */
+}
+
+/* Thêm lớp active cho item đầu tiên */
+.start_item{
+    border-radius: 5px 0 0 5px !important;
+}
+.end_item{
+    border-radius: 0 5px 5px 0 !important;
+}
+
+/* Các lớp style bổ sung cho khi không active */
+.list_item:not(.active):hover {
+    background-color: #ddd; /* Màu nền khi hover lên item chưa active */
+}

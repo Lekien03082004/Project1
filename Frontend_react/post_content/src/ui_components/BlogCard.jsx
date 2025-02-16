@@ -11,7 +11,7 @@ import { BASE_URL } from "../api";
 function BlogCard({blog}) {
   const {isDarkMode} = useContext(ThemeContext)
   return (
-    <div className={clsx('col')}>
+    <div className={clsx('col' )}>
       <div className={clsx('card', 'h-100',{'bg-dark':isDarkMode})}>
         <img src={`${BASE_URL}${blog?.featured_image}`} className="card-img-top h-auto" alt="..." />
         <Badge blog={blog}/>
@@ -22,7 +22,7 @@ function BlogCard({blog}) {
             </h5>
           </Link>
         </div>
-        <CardFooter />  
+        <CardFooter blog = {blog}/>  
       </div>
     </div>
   );
